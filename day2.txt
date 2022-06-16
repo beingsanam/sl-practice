@@ -1,0 +1,78 @@
+Variable Declaration
+c/ java - int,float,char
+
+js - 1. var 2. let 3. const
+
+var
+var a = "suman";
+console.log(a);
+
+let
+let a = 5.5;
+let b = "suman";
+console.log(a);
+console.log(b);
+
+variable redeclare garna paainxa - tara let keyword use garna bhayena
+
+const
+const a = 6;
+const b = "suman";
+console.log(a);
+console.log(b);
+
+variable redeclare garna paaidaina
+
+function and variables are written in cammelCase
+//let my_name = "suman";
+let myNname = "suman";
+function myFunction() {
+    alert("hello");
+  }
+
+comment
+
+1. single line comment
+name bhaneko manxeko name
+let name = "js";
+console.log(name);
+
+2. multiple line comment
+
+/*
+name bhaneko manxeko name
+bla bla
+*/
+let name = "js";
+console.log(name);
+
+
+
+How to embed js in html??
+
+1. Embedding js code - head tag or body tag bhitra script tag use garni
+
+   <body>
+<script>
+  console.log("maths");
+</script>
+</body> 
+
+2. inline
+
+ <body>
+<button onclick="alert('welcome')">Click me</button>
+</body> 
+
+3. external
+
+   <script src="./index.js"></script> 
+
+
+
+--noscript tag
+   <body>
+<noscript>Sorry browser doesnt support js code</noscript>
+</body> 
+
+chrome - settings - privacy & security - site settings - javascript -

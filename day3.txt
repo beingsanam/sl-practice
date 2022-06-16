@@ -1,0 +1,62 @@
+Operators
+
+Expression - operators and operand ko combination
+
+2 + 2
+2 = operand
++ = operators
+
+operators = which perform operations on the operand
+
+3 types: 
+1. unary : accepts only one operand
+2. binary : accpets two operands
+3. ternary : accepts 3 operands (conditional operator)
+
+
+Types of operators in js
+1.
+//Arithmetic operators
+//Performs basic mathematic operations
+
+let a = 7;
+let b = 3;
+console.log("addition is ", a + b); //10
+console.log("subtarction is ", a - b); //4
+console.log("multipliation is ", a * b); //21
+console.log("divison is ", a / b); //2.335
+console.log("modulus is ", a % b); //1
+//special case
+console.log(10 / 0); //infinity
+console.log("2" + "3"); //23
+console.log(parseInt("2") + parseInt("3")); //5
+console.log(parseInt("suman")); //NaN
+
+
+Conversion :
+2 types:
+Explicit conversion: hamiley data convert
+parseInt("2")
+Implicit Conversion : JS aafaile convert garxa
+console.log(5 == "5"); //true
+
+
+2.
+//Relational Opoerators
+//Comparison Operators
+//Compares two operands and gives the relation between them
+//Returns true or false
+
+let a = 7;
+let b = 3;
+console.log(a < b); //false
+console.log(a > b); //true
+console.log(a <= b); //false
+console.log(a >= b); //true
+
+console.log(5 == 5); //true
+console.log(5 === 5); //true
+
+console.log(5 == "5"); //true
+console.log(5 === "5"); //false
+console.log(5 === parseInt("5")); //true

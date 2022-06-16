@@ -1,0 +1,11 @@
+install vs code
+desktop - folder - SL
+Sl Folder - 2 Files:
+1. index.html
+2. index.js
+
+index.html - inside  head tag
+<script src="index.js"></script>
+
+html file - path copy - browser run
+console - output
