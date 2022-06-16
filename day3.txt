@@ -60,3 +60,120 @@ console.log(5 === 5); //true
 console.log(5 == "5"); //true
 console.log(5 === "5"); //false
 console.log(5 === parseInt("5")); //true
+
+
+3.
+//logical operators
+//Returns true or false
+
+// && - and operator - if both conditions are true, then it returns true otherwise false
+// || - or operator - if any one of the conditions is true, it returns true otherwise false
+// ! - not operator
+
+let a = 3;
+let b = 4;
+let c = 5;
+
+console.log(a < b && b < c); //true
+console.log(a < b && b > c); //false
+console.log(a < b || b < c); //true
+console.log(a < b || b > c); //true
+console.log(a > b || b > c); //false
+console.log(!(a < b)); //false
+console.log(!(a > b)); //true
+
+
+
+4.
+//Ternary Operator
+//conditional operators
+
+// let num = 10;
+// if (num % 2 == 0) {
+//   console.log("even");
+// } else {
+//   console.log("odd");
+// }
+
+let num = 11;
+console.log(num % 2 == 0 ? "even" : "odd");
+
+//syntax:
+//condition ? true : false
+
+
+5.
+//Assignment Operators
+
+//use to assign a value to variable
+
+let a = 10;
+console.log("a= ", a); //10
+a = 20;
+console.log("a=", a); //20
+// a = a + 10;
+a += 10;
+console.log("a=", a); //30
+a -= 10;
+console.log("a=", a); //20
+a *= 2;
+console.log("a=", a); //40
+// a = a / 2;
+a /= 2;
+console.log("a=", a); //20
+
+
+
+6.
+//Increment & Decrement Operators
+
+//Incremenet Operators - Increment value of variable by 1
+// Post increment - variable ++
+//Pre increment - ++ varaible
+
+//Decrement Operators - Decrement of variable by 1
+// Post Decrement - variable --
+//Pre Decrement - -- varaible
+
+let a = 10;
+console.log("a=", a); //10
+a++;
+console.log("a=", a); //11
+
+let b = 10;
+console.log("b=", b); //10
+++b;
+console.log("b=", b); //11
+
+let c = 10;
+console.log("c=", c); //10
+c--;
+console.log("c=", c); //9
+
+let d = 10;
+console.log("d=", d); //10
+--d;
+console.log("d=", d); //9
+
+
+
+??what is the difference
+
+let a = 10;
+console.log("a=", a); //10
+
+//2 statements
+// a =a ;
+// a = a+1;
+console.log("a=", (a = a)); //10
+a = a + 1;
+console.log(a); //11
+
+let b = 10;
+console.log("b=", b); //10
+//b++;
+//1. b = b+1
+//2. b = b
+console.log("b=", (b = b + 1)); //11
+b = b;
+console.log(b);
