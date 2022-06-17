@@ -177,3 +177,44 @@ console.log("b=", b); //10
 console.log("b=", (b = b + 1)); //11
 b = b;
 console.log(b);
+
+
+7.
+Bitwise Operator
+Number System
+Binary Number Systme
+Decimal Number System
+Conversion
+
+console.log(2 & 5);
+2 = 010
+5 = 101
+0 0 0 = 0
+
+
+8.
+
+// Special Operator
+
+// typeof
+
+let a = 5;
+console.log(typeof a); //number
+let b = "suman";
+console.log(typeof b); //string
+
+console.log(typeof true); //boolean
+console.log(typeof false);
+console.log(typeof undefined); //undefined
+console.log(typeof null); //object
+let c = new Object();
+console.log(typeof c); //object
+
+// comma
+
+let sum = (2, 4) + (1, 5);
+console.log(sum);
+
+//new
+//delete - object maa padhni
+
