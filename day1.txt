@@ -9,3 +9,10 @@ index.html - inside  head tag
 
 html file - path copy - browser run
 console - output
+
+
+// "use strict";
+// for (suman = 0; suman < 10; suman++) {
+//   console.log(suman);
+// }
+//javascript is weakly-loosely typed programming language
