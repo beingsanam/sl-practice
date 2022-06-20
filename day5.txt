@@ -1,0 +1,141 @@
+Control Statements
+1. Conditional statements : if , if else, switch
+2.loping statements : for, while, do while
+3.Jumping statemnets
+a. break
+b. continue
+c. function call
+d. return
+
+Function - block of code, which performs specific task
+
+Ways to create a function
+1. Using function declaration
+
+function keyword use garera
+
+Syntax:
+function functionName([parameters]){
+    statements;
+    return(optional)
+    by default return is undefined
+}
+function call
+
+function sayHello() {
+  console.log("Hello");
+}
+sayHello();
+
+Types of JS Functions
+1. Function without parameters and without return type
+function sayHello() {
+  console.log("Hello");
+}
+sayHello();
+
+2. Function with parameters and without return type
+
+function sum(a, b) {
+  let c = a + b;
+  console.log(c);
+}
+sum(2, 3);//5
+
+3. Function without parameters and with return type
+
+function sayHello() {
+  return "Hello";
+}
+let result = sayHello();
+console.log(result);
+console.log(sayHello());
+
+4. Function with parameters and with return type
+
+function product(c, d) {
+  let p = c * d;
+  return p;
+}
+console.log(product(5, 6));
+
+2. Using function expression
+
+let sayHello = function () {
+  console.log("hello");
+};
+sayHello();
+
+let product = function (a, b) {
+  let p = a * b;
+  return p;
+};
+
+console.log(product(2, 3));
+
+a();
+function a() {
+  console.log("a");
+}
+b();
+let b = function () {
+  console.log("b");
+};
+
+Hoisting- JS execute huney bela maa - jat pani variable declaration ra function declaration xan, JS le mathi top maa gayera raakhxa
+
+3. Uisng function constructor
+
+new keyword use hunxa
+
+let functionName = new Function("params1", "param2", "function body");
+
+let sum = new Function("a", "b", "{return a+b}");
+console.log(sum(4, 5));
+
+4. IIFE (Immediately Invoked Function)
+is executed as soon as it is defined
+self executed function
+(ffunction define - formal parameter)(argument pass-actual parameters)
+(function (a, b) {
+  console.log(a + b);
+})(2, 3);
+
+Variable Scope
+accessibility of variable
+1. Global variable - variable declared outside the function
+2. Local varibale - Variable declared inside a function
+
+let a = 10;
+let b = 15;
+console.log(a); //10
+function print() {
+  let b = 5;
+  console.log(b); //15
+  console.log(a); //10
+}
+print();
+console.log(b); //15
+Why we create function?
+1. Reusability
+2. Debugging
+3. Break large problem into small module
+
+call a function inside a function
+
+function c() {
+  console.log("c");
+}
+function b() {
+  console.log("b");
+  c();
+}
+function a() {
+  console.log("a");
+  b();
+}
+a();
+
+Stack call
+Factorial of a number using for loop
+Factorial of a number using recursion
