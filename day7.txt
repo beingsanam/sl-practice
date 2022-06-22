@@ -1,0 +1,105 @@
+array - collection of  data or value
+0 based indexing
+
+How to create array
+
+1. Using constructor notation
+syntax: let arrayName = new Array(list of values)
+let students = new Array("A", "B", "C", "D", "E");
+
+2. Using literal notation
+Syntax : let arrayName = [comma separated list of values]
+let names = ["ram", "shyam", "bandan", "ayushma", "ashir"];
+
+How to get the value of array elements
+Syntax: arrayName[index]
+
+console.log(students[1]); //B
+
+How to set new value to the array
+syntax : arrayName[index] = value;
+
+students[4] = "f";
+console.log(students);
+
+Array traversal
+let students = new Array("A", "B", "C", "D", "E");
+for (i = 0; i < 6; i++) {
+  console.log(students[i]);
+}
+OR
+for (i = 0; i < students.length; i++) {
+  console.log(students[i]);
+}
+
+Array Methods
+
+1. push() - it affects the original array
+Array ko last maa element add garxa ani naya lenghth return garxa
+let students = new Array("A", "B", "C", "D", "E");
+console.log(students.push("Z")); //6
+console.log(students); //a,b,c,d,e,z
+
+2.pop
+array ko last element lai remove garxa ani tyo element lai return garxa
+let students = new Array("A", "B", "C", "D", "E");
+console.log(students.pop()); //E
+console.log(students); //a,b,c,d
+
+3.unshift() - array ko suru maa element add garxa return the naya length
+let students = new Array("A", "B", "C", "D", "E");
+console.log(students.unshift(0, 1));
+console.log(students); //0,1,a,b,c,d,e
+
+4. shift() - array ko suru bata remove garera tyo element lai return garxa
+let students = new Array("A", "B", "C", "D", "E");
+console.log(students.shift()); //a
+console.log(students); //b,c,d,e
+
+5. splice
+changes the content of the array by removing the existimg element and or adding new elements
+syntax: splice(startIndex,deleteCount,(..args))
+startIndex: index of element where deletion or insertion beging
+deleteCount: number of elements to be deleted
+args - added elements
+
+let students = ["A", "B", "C", "D", "E"];
+students.splice(2, 2);
+console.log(students); //a,b,e
+students.splice(2, 0, "Z");
+console.log(students); //a,b,z,c,d,e
+
+6.slice() - return the new sub array
+syntax: slice(startIndex,endIndex)
+start index - index of the 1st element to be sliced
+last index - index of the element to be sliced + 1
+let students = ["A", "B", "C", "D", "E"];
+console.log(students.slice(1, 4));
+console.log(students);
+
+7. concat -append the given elements to the elements of the array
+note - it doesn't affect the original array
+let students = ["A", "B", "C", "D", "E"];
+console.log(students.concat("g", "h"));
+console.log(students);
+
+it is used to add 2 arrays
+let num1 = [1, 2, 3, 4, 5];
+let num2 = [6, 7, 8, 9];
+console.log(num1.concat(num2));
+console.log(num1);
+console.log(num2);
+
+8. join()
+return the new array by joioning the list of elements with the given separator
+
+let students = ["A", "B", "C", "D", "E"];
+console.log(students.join("/"));//a/b/c/d/e
+
+9.indexOf - returns the index of 1st occurence
+let students = ["A", "B", "C", "D", "E", "A"];
+console.log(students.indexOf("A")); //0
+
+10. lastIndexOf() - returns the index of last occurence
+let students = ["A", "B", "C", "D", "E", "A"];
+console.log(students.lastIndexOf("A")); //5
