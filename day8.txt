@@ -80,4 +80,99 @@ console.log("Location:", arrayContent.index);
 // console.log("Found word:", arrayContent[0]);
 // console.log("Location:", arrayContent.index);
 
-//Metacharacters
+
+Metacgaracters
+reserved characters, which gives special meaning while processing a search pattern
+
+Eg:
+1. (dot). - indicates any character excepet new line
+
+console.log(/Suman/.test("Suman")); //true
+console.log(/.uman/.test("Suman")); //true
+console.log(/.uman/.test("Buman")); //true
+console.log(/.uman/.test("\numan")); //false
+
+2. \. = usual dot
+console.log(/Ayushma/.test("Ayushma")); //true
+console.log(/\.yushma/.test("Ayushma")); //false
+console.log(/\.yushma/.test(".yushma")); //true
+console.log(/.\.yushma/.test("G.yushma")); //true
+
+3. \w - indicates a word character ,i.e alphabet ,digit or underscore
+
+console.log(/Bandan/.test("Bandan")); //true
+console.log(/\wandan/.test("Bandan")); //true
+console.log(/\wandan/.test("+andan")); //false
+console.log(/\wandan/.test("_andan")); //true
+
+4. \d - indicates a digit (0-9)
+
+console.log(/Hello123/.test("Hello123")); //true
+console.log(/Hello12\d/.test("Hello123")); //true
+console.log(/Hello12\d/.test("Hello12A")); //false
+
+Begins With and Ends with
+1. ^ - indicates whether a string begins with a character
+console.log(/^S/.test("Suman3245")); //true
+console.log(/^S/.test("Bandan1245")); //false
+
+2. $ - indicates whether a string ends with a character
+
+console.log(/Samar12345$/.test("Samar12340")); //false
+console.log(/^Samar12345$/.test("Samar12345")); //true
+
+Quantifiers
+metacharacters used to test the number of occurence of a character in a string
+
+1. + - indicates one or more occurence of a character
+
+console.log(/Hello005/.test("Hello005")); //true
+console.log(/Hello0+5/.test("Hello005")); //true
+console.log(/Hello0+5/.test("Hello0000005")); //true
+console.log(/Hello0+5/.test("Hello5")); //false
+
+2. * - indicates 0 or more occurence of a character
+console.log(/Hello005/.test("Hello005")); //true
+console.log(/Hello0*5/.test("Hello005")); //true
+console.log(/Hello0*5/.test("Hello0000005")); //true
+console.log(/Hello0*5/.test("Hello5")); //false
+
+3. {n} - indicates exactly n occurence of a character
+console.log(/Hello005/.test("Hello005")); //true
+console.log(/Hello05{2}/.test("Hello055")); //true
+console.log(/Hello0{2}5/.test("Hello000005")); //false
+
+4. {m,n} - indicates between m and n occurence of a character
+console.log(/Hello005/.test("Hello005")); //true
+console.log(/Hello0{2,4}5/.test("Hello05")); //false
+console.log(/Hello0{2,4}5/.test("Hello00005")); //true
+
+5.{m,} - indicates at least m occurence of a character
+console.log(/Hello005/.test("Hello005")); //true
+console.log(/Hello0{2,}5/.test("Hello05")); //false
+console.log(/Hello0{2,}5/.test("Hello000005")); //true
+
+Expression in regexp
+ / / - regexp
+() [] - expression - used to find the occurence of one of the characters specified in the bracket
+
+Eg:
+1. (A|B) - indicates the occurence of either A or B or both
+console.log(/Samriddhi/.test("Samriddhi")); //true
+console.log(/(S|G)amriddhi/.test("Samriddhi")); //true
+console.log(/(S|G)amriddhi/.test("Gamriddhi")); //true
+console.log(/(S|G)amriddhi/.test("SGamriddhi")); //true
+console.log(/(S|G)amriddhi/.test("Uamriddhi")); //false
+
+2. [AB] - indicates the occurence of either A or B or both
+console.log(/Samriddhi/.test("Samriddhi")); //true
+console.log(/[SG]amriddhi/.test("Samriddhi")); //true
+console.log(/[SG]amriddhi/.test("Gamriddhi")); //true
+console.log(/[SG]amriddhi/.test("SGamriddhi")); //true
+console.log(/[SG]amriddhi/.test("Uamriddhi")); //false
+
+3. [^AB] - indicates the occurence of a charactere which is not A or B
+4. [A-Z] - indicates the occurence of any character between A and Z
+5. [^A-Z] -indicates the occurence of any character not between A and Z
+6. [0-9] - indicates the occurence of any character between 0  and 9
+7. [^0-9] - indicates the occurence of any character not between 0 and 9
