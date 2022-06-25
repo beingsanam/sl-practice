@@ -1,0 +1,99 @@
+Document object model (DOM)
+Document object represents html Document
+when html document is loaded, it becomes document object
+document is the root element
+
+DOM is used to change,add or delete the element of HTML document and make the web page dynamic
+
+
+<html>
+  <head>
+    <title>This is Title</title>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <div id="div1">
+      <p id="para1">Para 1</p>
+    </div>
+    <div id="div2">
+      <p id="para2">Para 2</p>
+    </div>
+  </body>
+</html>
+
+//figure is dom.png
+Methods of documnet object
+
+1. write("string) - writes the string in the documnet
+document.write("Hello world");
+
+2. writeln("string) - new line
+document.writeln("Hello World!");
+document.writeln("Have a nice day!");
+
+
+3. getElementById()
+//.html
+  <body>
+    <p id="para1">This is paragraph 1</p>
+    <p id="para2">This is paragraph 2</p>
+  </body>
+
+//.js file
+const tag1 = document.getElementById("para1");
+let tag2 = document.getElementById("para");
+
+tag1.style.color = "green";
+
+
+4. getElementsByClassName
+//.html file
+ <body>
+    <div class="para">This is a paragraph</div>
+    <div class="para">This is a paragraph</div>
+  </body>
+
+ //.js file
+let example = document.getElementsByClassName("para");
+example[0].style.color = "green";
+example[1].style.color = "red";
+
+
+5. getElementByName()
+
+//.html 
+  <body>
+    Music :
+    <input type="checkbox" name="hobby" />
+    Travelling:
+    <input type="checkbox" name="hobby" />
+    Dance:
+    <input type="checkbox" name="hobby" />
+    <p>The total number of hobbies are:</p>
+    <p id="text"></p>
+  </body>
+
+//.js
+let num = document.getElementsByName("hobby").length;
+document.getElementById("text").innerHTML = num;
+
+6. getElementsByTagName()
+//.html
+ <body>
+    <li>bandan</li>
+    <li>ayushma</li>
+    <li>bandana</li>
+    <li>bandu</li>
+
+    <p>The list of li elements is :</p>
+    <p id="text"></p>
+  </body>
+
+//.js
+const tagList = document.getElementsByTagName("li");
+
+document.getElementById("text").innerHTML = tagList[2].innerHTML;
+
+
+
+Q. innerHTML vs innerText
