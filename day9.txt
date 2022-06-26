@@ -97,3 +97,5 @@ document.getElementById("text").innerHTML = tagList[2].innerHTML;
 
 
 Q. innerHTML vs innerText
+- inner HTML = plain text/content return garxa
+- innerText = tag pani return garxa
